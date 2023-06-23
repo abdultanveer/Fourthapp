@@ -12,20 +12,42 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:layout_marginTop="76dp"
-        android:text="start"
         android:onClick="handleService"
+        android:text="start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnStop"
-        android:onClick="handleService"
-
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_marginTop="81dp"
         android:layout_marginEnd="114dp"
+        android:onClick="handleService"
         android:text="stop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="54dp"
+        android:text="bind"
+        android:onClick="handleBoundService"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+    <Button
+        android:id="@+id/btnUnbind"
+        android:onClick="handleBoundService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:text="unbind"
+        app:layout_constraintEnd_toEndOf="@+id/btnStop"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop" />
 </androidx.constraintlayout.widget.ConstraintLayout>
